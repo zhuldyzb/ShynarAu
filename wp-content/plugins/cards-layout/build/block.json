@@ -1,0 +1,251 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "phclb/cards-layout",
+  "version": "1.0.0",
+  "title": "Cards layout",
+  "category": "widgets",
+  "description": "This plugin offers multiple customizable layouts like grid, list, and carousel, making content display easy and flexible.",
+  "keywords": [
+    "cards",
+    "layout",
+    "content",
+    "gallery",
+    "lightbox"
+  ],
+  "textdomain": "b-blocks",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": ""
+    },
+    "cards": {
+      "type": "array",
+      "default": [
+        {
+          "img": {
+            "url": "https://i.ibb.co/JR5B76cx/card-3.jpg"
+          },
+          "altText": "",
+          "title": "John Doe",
+          "desc": "Conveniently engineer diverse products rather than bleeding-edge applications",
+          "btnLabel": "Load More",
+          "btnUrl": "#",
+          "cUrl": "",
+          "newTab": false,
+          "focalPoint": ""
+        },
+        {
+          "img": {
+            "url": "https://i.ibb.co/KjbH0QFg/card-2.jpg"
+          },
+          "altText": "",
+          "title": "John Doe",
+          "desc": "Conveniently engineer diverse products rather than bleeding-edge applications",
+          "btnLabel": "Load More",
+          "btnUrl": "#",
+          "cUrl": "#",
+          "newTab": false,
+          "focalPoint": ""
+        },
+        {
+          "img": {
+            "url": "https://i.ibb.co/v4ZqhZKV/card-1.jpg"
+          },
+          "altText": "",
+          "title": "John Doe",
+          "desc": "Conveniently engineer diverse products rather than bleeding-edge applications",
+          "btnLabel": "Load More",
+          "btnUrl": "#",
+          "cUrl": "#",
+          "newTab": false,
+          "focalPoint": ""
+        }
+      ]
+    },
+    "isContent": {
+      "type": "boolean",
+      "default": false
+    },
+    "cardStyle": {
+      "type": "object",
+      "align": "left",
+      "default": {
+        "newTab": false,
+        "borders": {
+          "color": "#000",
+          "style": "solid",
+          "width": "1px"
+        },
+        "radius": 5,
+        "padding": {
+          "top": "5px",
+          "right": "5px",
+          "bottom": "5px",
+          "left": "5px"
+        }
+      }
+    },
+    "img": {
+      "type": "object",
+      "default": {
+        "borderRadius": 0
+      }
+    },
+    "title": {
+      "type": "object",
+      "default": {
+        "typo": {
+          "fontSize": {
+            "desktop": 18,
+            "tablet": 14,
+            "mobile": 14
+          },
+          "fontWeight": 500,
+          "lineHeight": "135%"
+        },
+        "color": "#000"
+      }
+    },
+    "desc": {
+      "type": "object",
+      "default": {
+        "typo": {
+          "fontSize": {
+            "desktop": 14,
+            "tablet": 14,
+            "mobile": 14
+          },
+          "fontWeight": 400,
+          "lineHeight": "135%"
+        },
+        "color": "#000"
+      }
+    },
+    "btn": {
+      "type": "object",
+      "default": {
+        "typo": {
+          "fontSize": {
+            "desktop": 16,
+            "tablet": 14,
+            "mobile": 14
+          },
+          "fontWeight": 500,
+          "lineHeight": "135%"
+        },
+        "colors": {
+          "color": "#fff",
+          "bg": "#000"
+        },
+        "padding": {
+          "top": "5px",
+          "right": "5px",
+          "bottom": "5px",
+          "left": "5px"
+        },
+        "borders": {
+          "color": "#000",
+          "style": "solid",
+          "width": "0px"
+        },
+        "radius": 5
+      }
+    },
+    "columns": {
+      "type": "object",
+      "default": {
+        "desktop": 3,
+        "tablet": 2,
+        "mobile": 1
+      }
+    },
+    "columnGap": {
+      "type": "string",
+      "default": "30px"
+    },
+    "rowGap": {
+      "type": "string",
+      "default": "40px"
+    },
+    "layout": {
+      "type": "string",
+      "default": "vertical"
+    },
+    "alignment": {
+      "type": "string",
+      "default": "center"
+    },
+    "typography": {
+      "type": "object",
+      "default": {
+        "fontSize": 25
+      }
+    },
+    "colors": {
+      "type": "object",
+      "default": {
+        "color": "#333",
+        "bg": "#fff"
+      }
+    },
+    "separator": {
+      "type": "object",
+      "default": {
+        "width": "20%",
+        "height": "2px",
+        "style": "solid",
+        "color": "#bbb"
+      }
+    },
+    "padding": {
+      "type": "object",
+      "default": {
+        "top": "15px",
+        "right": "30px",
+        "bottom": "15px",
+        "left": "30px"
+      }
+    },
+    "margin": {
+      "type": "object",
+      "default": {
+        "top": "0px",
+        "right": "0px",
+        "bottom": "15px",
+        "left": "0px"
+      }
+    },
+    "border": {
+      "type": "object",
+      "default": {
+        "radius": "5px"
+      }
+    },
+    "shadow": {
+      "type": "array",
+      "default": {}
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {}
+  },
+  "editorScript": [
+    "file:./index.js"
+  ],
+  "editorStyle": [
+    "file:./index.css"
+  ],
+  "style": [
+    "file:./view.css"
+  ],
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}
