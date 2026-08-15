@@ -1,4 +1,5 @@
 ---
+draft: true
 title: TERS YÜZ SINIF TEKNIĞINE GÖRE TÜRKÇE DERSI
 date: 2025-08-10
 description: Аударылған сынып әдістемесі бойынша түрік тілі сабағы туралы слайд.

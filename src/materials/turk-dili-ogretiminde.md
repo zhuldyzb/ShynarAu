@@ -1,4 +1,5 @@
 ---
+draft: true
 title: Türk Dili Öğretiminde Modern Teknoloji Kullanımı
 date: 2025-08-10
 description: Түрік тілін оқытуда заманауи технологияларды қолдану туралы слайд.

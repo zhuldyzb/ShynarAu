@@ -9,10 +9,33 @@ permalink: /education/index.html
 		<div class="entry-content single-content">
 			<h1>Академия: Білім және тәжірибе</h1>
 			<p class="has-medium-font-size">Қош келдіңіз! Бұл – менің көпжылдық зерттеулерім мен оқыту тәжірибемнің нәтижесінде жинақталған білім орталығы. «Академияның» мақсаты – тіл білімі мен әдебиет әлеміндегі күрделі идеяларды қарапайым әрі қолжетімді ету. Мұнда студенттер, оқытушылар және тілге қызығатын кез келген жан өз ізденісіне қажетті ресурстарды таба алады.</p>
+
+			<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
+				<div class="wp-block-embed__wrapper">
+					<iframe title="түрік тілі сабағы" width="720" height="405" src="https://www.youtube.com/embed/dB-vEyTrpwk?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</figure>
+
+			<div style="height:23px" aria-hidden="true" class="wp-block-spacer"></div>
+
+			<figure class="wp-block-embed is-type-rich is-provider-speaker-deck wp-block-embed-speaker-deck wp-embed-aspect-16-9 wp-has-aspect-ratio">
+				<div class="wp-block-embed__wrapper">
+					<iframe loading="lazy" title="TERS YÜZ SINIF TEKNIĞINE GÖRE TÜRKÇE DERSI" id="talk_frame_1433743" class="speakerdeck-iframe" src="//speakerdeck.com/player/598d1964dba14884b099b0debfc9740e" width="720" height="405" style="aspect-ratio:720/405; border:0; padding:0; margin:0; background:transparent;" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen"></iframe>
+				</div>
+			</figure>
+
+			<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+			<figure class="wp-block-embed is-type-rich is-provider-speaker-deck wp-block-embed-speaker-deck wp-embed-aspect-16-9 wp-has-aspect-ratio">
+				<div class="wp-block-embed__wrapper">
+					<iframe loading="lazy" title="Türk Dili Öğretiminde Modern Teknoloji Kullanımı" id="talk_frame_1433745" class="speakerdeck-iframe" src="//speakerdeck.com/player/3d51ca57dc134be3b83c726e9f7eb152" width="720" height="405" style="aspect-ratio:720/405; border:0; padding:0; margin:0; background:transparent;" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen"></iframe>
+				</div>
+			</figure>
 		</div>
 	</div>
 </article>
 
+{% if collections.materials.length %}
 <div class="blog-grid" style="display:grid;grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));gap:2rem;margin-top:2rem;">
 {% for item in collections.materials %}
 	<article class="entry content-bg loop-entry card-effect" style="border-radius:8px;overflow:hidden;">
@@ -33,3 +56,4 @@ permalink: /education/index.html
 	</article>
 {% endfor %}
 </div>
+{% endif %}

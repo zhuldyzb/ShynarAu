@@ -35,7 +35,10 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addCollection("materials", (collectionApi) => {
-    return collectionApi.getFilteredByGlob("src/materials/*.md").sort((a, b) => b.date - a.date);
+    return collectionApi
+      .getFilteredByGlob("src/materials/*.md")
+      .filter((item) => !item.data.draft)
+      .sort((a, b) => b.date - a.date);
   });
 
   // Turns a normal YouTube link into an embeddable one. Non-YouTube links
