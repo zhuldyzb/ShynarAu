@@ -93,8 +93,8 @@
 															<li class="menu-item"><a href="/">Басты бет</a></li>
 															<li class="menu-item"><a href="/about/">Өзім туралы</a></li>
 															<li class="menu-item"><a href="/research/">Зерттеулер</a></li>
-															<li class="menu-item"><a href="/education/">Академия</a></li>
-															<li class="menu-item current-menu-item"><a href="/blog/">Блог</a></li>
+															<li class="menu-item{% if navSection == "academy" %} current-menu-item{% endif %}"><a href="/education/">Академия</a></li>
+															<li class="menu-item{% if navSection != "academy" %} current-menu-item{% endif %}"><a href="/blog/">Блог</a></li>
 															<li class="menu-item"><a href="/contact/">Байланыс</a></li>
 														</ul>
 													</div>
