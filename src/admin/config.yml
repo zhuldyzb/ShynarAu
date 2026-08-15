@@ -27,3 +27,21 @@ collections:
         options: ["Күнделікті өмір", "Білім", "Ғылым", "Жаңалықтар"]
         required: false
       - { label: "Мазмұны", name: "body", widget: "markdown" }
+
+  - name: "materials"
+    label: "Академия материалдары"
+    label_singular: "Материал"
+    folder: "src/materials"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    identifier_field: title
+    fields:
+      - { label: "Атауы", name: "title", widget: "string" }
+      - { label: "Күні", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Қысқаша сипаттама", name: "description", widget: "text", required: false }
+      - { label: "Мұқаба суреті", name: "image", widget: "image", required: false }
+      - { label: "Видео/слайд сілтемесі (YouTube, SpeakerDeck, Google Slides)", name: "embedUrl", widget: "string", required: false, hint: "YouTube үшін әдеттегі сілтемені қойсаңыз болады. SpeakerDeck/Google Slides үшін \"Embed\" сілтемесін қолданыңыз." }
+      - { label: "Файл (PDF, Word, PowerPoint)", name: "file", widget: "file", required: false }
+      - { label: "Қосымша мәтін", name: "body", widget: "markdown", required: false }

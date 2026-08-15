@@ -1,0 +1,33 @@
+---
+layout: base.njk
+---
+<article class="entry content-bg single-entry post type-post status-publish format-standard hentry">
+	<div class="entry-content-wrap">
+		<header class="entry-header post-title">
+			<h1 class="entry-title">{{ title }}</h1>
+			<p style="color:var(--global-palette6);font-size:15px;margin-top:0.5em;">{{ date | kkDate }}</p>
+		</header>
+
+		<div class="entry-content single-content">
+			{% if image %}
+			<figure class="wp-block-image size-full"><img src="{{ image }}" alt="{{ title }}" style="max-width:100%;height:auto;"></figure>
+			{% endif %}
+
+			{% if description %}<p>{{ description }}</p>{% endif %}
+
+			{% if embedUrl %}
+			<figure class="wp-block-embed wp-embed-aspect-16-9 wp-has-aspect-ratio">
+				<div class="wp-block-embed__wrapper">
+					<iframe loading="lazy" title="{{ title }}" src="{{ embedUrl | embedSrc }}" width="720" height="405" style="aspect-ratio:720/405;width:100%;border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				</div>
+			</figure>
+			{% endif %}
+
+			{% if file %}
+			<p><a class="wp-block-button__link" href="{{ file }}" download style="display:inline-block;background:var(--global-palette1);color:#fff;padding:0.7em 1.4em;border-radius:9999px;text-decoration:none;">Файлды жүктеп алу</a></p>
+			{% endif %}
+
+			{{ content | safe }}
+		</div>
+	</div>
+</article>

@@ -6,7 +6,6 @@ module.exports = function (eleventyConfig) {
     "category",
     "contact",
     "dictionary",
-    "education",
     "form",
     "research",
     "wp-content",
@@ -33,6 +32,20 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection("posts", (collectionApi) => {
     return collectionApi.getFilteredByGlob("src/posts/*.md").sort((a, b) => b.date - a.date);
+  });
+
+  eleventyConfig.addCollection("materials", (collectionApi) => {
+    return collectionApi.getFilteredByGlob("src/materials/*.md").sort((a, b) => b.date - a.date);
+  });
+
+  // Turns a normal YouTube link into an embeddable one. Non-YouTube links
+  // (SpeakerDeck, Google Slides "embed" links, etc.) are assumed to already
+  // be embed-ready and are passed through unchanged.
+  eleventyConfig.addFilter("embedSrc", (url) => {
+    if (!url) return "";
+    const watch = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]+)/);
+    if (watch) return `https://www.youtube.com/embed/${watch[1]}`;
+    return url;
   });
 
   return {
