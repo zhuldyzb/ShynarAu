@@ -1,0 +1,31 @@
+---
+layout: base.njk
+title: Блог
+description: Shynar Auelbekova блогы - соңғы жазбалар
+permalink: /blog/index.html
+---
+<div class="blog-grid" style="display:grid;grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));gap:2rem;">
+{% for post in collections.posts %}
+	<article class="entry content-bg loop-entry card-effect" style="border-radius:8px;overflow:hidden;">
+		<a class="post-thumbnail kadence-thumbnail-ratio-2-3" href="{{ post.url }}">
+			<div class="post-thumbnail-inner">
+				{% if post.data.image %}<img src="{{ post.data.image }}" alt="{{ post.data.title }}">{% endif %}
+			</div>
+		</a><!-- .post-thumbnail -->
+		<div class="entry-content-wrap" style="padding:1.5rem;">
+			<header class="entry-header post-title">
+				{% if post.data.category %}
+				<div class="entry-taxonomies">
+					<span class="category-links term-links category-style-normal">{{ post.data.category }}</span>
+				</div>
+				{% endif %}
+				<h2 class="entry-title"><a href="{{ post.url }}" rel="bookmark">{{ post.data.title }}</a></h2>
+			</header>
+			<div class="entry-summary">
+				<p>{{ post.data.description }}</p>
+			</div>
+			<p><a href="{{ post.url }}">Толығырақ</a></p>
+		</div>
+	</article>
+{% endfor %}
+</div>

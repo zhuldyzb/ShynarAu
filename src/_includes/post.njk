@@ -1,0 +1,27 @@
+---
+layout: base.njk
+---
+{% if image %}
+<div class="post-thumbnail article-post-thumbnail alignwide kadence-thumbnail-ratio-2-3">
+	<div class="post-thumbnail-inner">
+		<img src="{{ image }}" class="post-top-featured wp-post-image" alt="{{ title }}">
+	</div>
+</div><!-- .post-thumbnail -->
+{% endif %}
+<article class="entry content-bg single-entry post type-post status-publish format-standard hentry">
+	<div class="entry-content-wrap">
+		<header class="entry-header post-title">
+			{% if category %}
+			<div class="entry-taxonomies">
+				<span class="category-links term-links category-style-normal">{{ category }}</span>
+			</div><!-- .entry-taxonomies -->
+			{% endif %}
+			<h1 class="entry-title">{{ title }}</h1>
+			<p style="color:var(--global-palette6);font-size:15px;margin-top:0.5em;">{{ date | kkDate }}</p>
+		</header><!-- .entry-header -->
+
+		<div class="entry-content single-content">
+			{{ content | safe }}
+		</div><!-- .entry-content -->
+	</div>
+</article>

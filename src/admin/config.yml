@@ -1,0 +1,29 @@
+backend:
+  name: git-gateway
+  branch: main
+
+publish_mode: simple
+media_folder: "src/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "posts"
+    label: "Блог жазбалары"
+    label_singular: "Блог жазбасы"
+    folder: "src/posts"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    identifier_field: title
+    fields:
+      - { label: "Тақырып", name: "title", widget: "string" }
+      - { label: "Күні", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Қысқаша сипаттама (тізімде көрінеді)", name: "description", widget: "text" }
+      - { label: "Мұқаба суреті", name: "image", widget: "image", required: false }
+      - label: "Санат"
+        name: "category"
+        widget: "select"
+        options: ["Күнделікті өмір", "Білім", "Ғылым", "Жаңалықтар"]
+        required: false
+      - { label: "Мазмұны", name: "body", widget: "markdown" }
